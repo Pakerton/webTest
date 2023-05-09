@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>webpagetest</title>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>  
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="webTest.css"> 
+    <script>
+        $(() => {
+          $("#a1").attr("target", "_blank");
+          $("#a2").attr("target", "_blank");
+          $("#a3").attr("target", "_blank");
+        //   console.log($("#a1").attr("target"));
+            function print(){
+                const newP = $("<p>");
+                newP.html("留言+1");
+                newP.css("color", "white");
+                $("#commentspace").append(newP);
+            };
+
+            function del(){
+                $("#commentspace").empty();
+            };
+
+            $("#button").click(() => {
+                print();
+            });
+            $("#b2").click(() => {
+                del();
+            });
+        });
+
+       
+
+        
+
+    </script>
+  </head>
+
+  <body>
+    <div class="container" style="position: relative; top: 30px;">
+        <div class="row">
+            <div id="title" class="col-lg" style="text-align:center ;">
+                <h1 style="color: white;">火星<span class="badge badge-dark">Mars</span></h1>
+            </div>
+
+            <div class="col-3"></div>
+
+            <div class="col-lg">
+            <p id="intro">火星（拉丁语：Mars；天文符号：♂），古称荧惑，是离太阳第四近的行星，也是太阳系中仅次于水星的第二小的行星，为太阳系里四颗类地行星之一。西方称火星为玛尔斯，是罗马神话中的战神，所以在英语中，火星是罗马战神的意思，通常被称为“红色星球”；古汉语中则因为它荧荧如火，位置、亮度时常变动让人无法捉摸而称之为荧惑。</p>
+            </div>
+        </div>
+        <div class="container" style="position: relative; transform:translateY(50%) translateX(5%)">
+            <div class="row">
+                <div class="col-lg">
+                    <a id="a1" href="https://zh.wikipedia.org/zh-cn/%E7%81%AB%E6%98%9F"><img id="marswiki" title="维基百科" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/450px-OSIRIS_Mars_true_color.jpg"><br><span id="s1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;火星：资料（维基）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+                </div>
+            
+                <div class="col-lg">
+                    <a id="a2" href="https://www.nasa.gov/mission_pages/msl/images/index.html"><img id="marsnasa" title="NASA" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia19401-main_sunset.gif"><br><span id="s1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图片集（NASA）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+                </div>
+
+                <div class="col-lg">
+                    <a id="a3" href="https://www.youtube.com/watch?v=D8pnmwOXhoY&ab_channel=NationalGeographic"><img id="marsyt" title="youtube" src="https://i.ytimg.com/vi/D8pnmwOXhoY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAunZmDXqA2l1L87v76u0FqcbBotQ"><br><span id="s1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;观看短片（国家地理）&nbsp;&nbsp;&nbsp;</span></a>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg" style="position: relative; top: 100px">
+                    
+                        <p>留言板：<p>
+                        <input id="comment" type="text" placeholder="在这里输入">
+                        <button id="button">提交</button>
+                        <br>
+                        <button id="b2">清空留言</button>
+                    
+                </div>
+
+                <div id="commentspace" class="col-lg">
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+body {
+    background-image: url(https://mars.nasa.gov/system/resources/detail_files/3550_3550_PIA14293-amended1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%vh 100%vw;
+}
+
+/* h1 {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+} */
+
+p {
+    color: white;
+    /* position: absolute; */
+}
+
+img{
+    height: 200px;
+    width: 200px;
+}
+
+a {
+    text-align: center;
+    color: white;
+}
+
+#s1{
+    text-align: center;
+}
+
+label{
+    color: white;
+}
